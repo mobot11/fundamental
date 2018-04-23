@@ -22,6 +22,7 @@ var env = nunjucks.configure([TEMPLATE_DIRECTORY,PUBLIC_DIRECTORY], {
     express: app,
     watch: true
 });
+
 // convert SASS to CSS from the lib source
 env.addFilter('sass_to_css', function(sassFile="app.scss") {
     try {
