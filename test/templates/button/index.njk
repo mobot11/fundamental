@@ -245,6 +245,43 @@ block: ['positive']
 }}
 <br>
 {{  button(
+        { label: 'Approve' },
+        modifier={
+            block: ['positive']
+        },
+        state={ selected: true }
+    )
+}}
+{{  button(
+        { label: 'Approve' },
+        modifier={
+            block: ['positive']
+        },
+        aria={ selected: true }
+    )
+}}
+{{  button(
+        { label: 'Approve' },
+        modifier={
+            block: ['positive']
+        },
+        state={ disabled: true }
+    )
+}}
+{{  button(
+        { label: 'Approve' },
+        modifier={
+            block: ['positive']
+        },
+        aria={ disabled: true }
+    )
+}}
+
+
+
+
+<br>
+{{  button(
         {
             label: 'Reject',
             icon: 'decline'
@@ -289,7 +326,39 @@ block: ['negative']
             block: ['l','negative']
         })
 }}
-
+<br>
+{{  button(
+        { label: 'Reject' },
+        modifier={
+            block: ['negative']
+        },
+        state={ selected: true }
+    )
+}}
+{{  button(
+        { label: 'Reject' },
+        modifier={
+            block: ['negative']
+        },
+        aria={ selected: true }
+    )
+}}
+{{  button(
+        { label: 'Reject' },
+        modifier={
+            block: ['negative']
+        },
+        state={ disabled: true }
+    )
+}}
+{{  button(
+        { label: 'Reject' },
+        modifier={
+            block: ['negative']
+        },
+        aria={ disabled: true }
+    )
+}}
 
 
 {% endset %}
@@ -454,6 +523,42 @@ block: ['main','positive']
 }}
 <br>
 {{  button(
+        { label: 'Approve' },
+        modifier={
+            block: ['main','positive']
+        },
+        state={ selected: true }
+    )
+}}
+{{  button(
+        { label: 'Approve' },
+        modifier={
+            block: ['main','positive']
+        },
+        aria={ selected: true }
+    )
+}}
+{{  button(
+        { label: 'Approve' },
+        modifier={
+            block: ['main','positive']
+        },
+        state={ disabled: true }
+    )
+}}
+{{  button(
+        { label: 'Approve' },
+        modifier={
+            block: ['main','positive']
+        },
+        aria={ disabled: true }
+    )
+}}
+<br>
+
+
+
+{{  button(
         {
             label: 'Reject',
             icon: 'decline'
@@ -498,6 +603,44 @@ block: ['main','negative']
             block: ['l','main','negative']
         })
 }}
+
+<br>
+{{  button(
+        { label: 'Reject' },
+        modifier={
+            block: ['main','negative']
+        },
+        state={ selected: true }
+    )
+}}
+{{  button(
+        { label: 'Reject' },
+        modifier={
+            block: ['main','negative']
+        },
+        aria={ selected: true }
+    )
+}}
+{{  button(
+        { label: 'Reject' },
+        modifier={
+            block: ['main','negative']
+        },
+        state={ disabled: true }
+    )
+}}
+{{  button(
+        { label: 'Reject' },
+        modifier={
+            block: ['main','negative']
+        },
+        aria={ disabled: true }
+    )
+}}
+
+
+
+
 
 {% endset %}
 {{ format(example) }}
@@ -614,7 +757,7 @@ block: ['main','negative']
 }}
 
 {% endset %}
-{{ format(example) }}
+{{ format(example,"white") }}
 
 
 
@@ -728,7 +871,7 @@ block: ['main','negative']
 }}
 
 {% endset %}
-{{ format(example) }}
+{{ format(example, "white") }}
 
 
 
