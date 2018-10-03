@@ -257,6 +257,33 @@ $block: #{$fd-namespace}-button;
     }
   }
 
+  &--shellheader {
+    color: $tempcolor-shell-icons;
+    border-color: transparent;
+    background-color: transparent;
+    &:hover {
+      color: $tempcolor-shell-icons;
+      background-color: $tempcolor-shell-icons-bg-hover;
+      border-color: transparent;
+      box-shadow: none;
+    }
+    &:active,
+    &.is-active,
+    &[aria-selected="true"],
+    &.is-selected,
+    &[aria-pressed="true"],
+    &.is-pressed {
+      color: $tempcolor-shell-icons;
+      background-color: $tempcolor-shell-icons-bg-active;
+      border-color: transparent;
+    }
+    &[aria-disabled="true"],
+    &.is-disabled,
+    &:disabled {
+      opacity: .25; // TEMP/PLACEHOLDER
+    }
+  }
+
   &--toolbar,
   &--grouped {
     color: fd-color("text", 2);
