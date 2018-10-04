@@ -10,6 +10,10 @@ group:
     colorhsl: hsl(210, 91%, 43%)
     textcolor: ffffff
     bordercolor: ffffff
+  - colorname: 2
+    colorvalue: d1e8ff
+    textcolor: 354A5F
+    bordercolor: ffffff
 
   - colorname: 2
     colorvalue: FFFFFF
@@ -76,6 +80,11 @@ group:
   - colorname: 2
     colorvalue: ffffff
     colorhsl: hsl(210, 0%, 100%)
+    textcolor: 000000
+    bordercolor: cfdbe7
+
+  - colorname: 3
+    colorvalue: d1e8ff
     textcolor: 000000
     bordercolor: cfdbe7
 
