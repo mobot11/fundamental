@@ -258,12 +258,12 @@ $block: #{$fd-namespace}-button;
   }
 
   &--shellheader {
-    color: $tempcolor-shell-icons;
+    color: fd-color(shell, 2);
     border-color: transparent;
     background-color: transparent;
     &:hover {
-      color: $tempcolor-shell-icons;
-      background-color: $tempcolor-shell-icons-bg-hover;
+      color: fd-color(shell, 2);
+      background-color: fd-color-darker(fd-color(shell, 1));
       border-color: transparent;
       box-shadow: none;
     }
@@ -273,8 +273,8 @@ $block: #{$fd-namespace}-button;
     &.is-selected,
     &[aria-pressed="true"],
     &.is-pressed {
-      color: $tempcolor-shell-icons;
-      background-color: $tempcolor-shell-icons-bg-active;
+      color: fd-color(shell, 2);
+      background-color: fd-color-darkest(fd-color(shell, 1));
       border-color: transparent;
     }
     &[aria-disabled="true"],
@@ -298,7 +298,6 @@ $block: #{$fd-namespace}-button;
     }
     &:active,
     &.is-active {
-      //color: fd-color("text", 2);
       background-color: fd-color-darkest(fd-color("neutral", 1));
       border-color: fd-color-darkest(fd-color("neutral", 1));
       box-shadow: none;

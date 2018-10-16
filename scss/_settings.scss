@@ -64,12 +64,6 @@ $fd-weights: map-merge((
 
 //COLORS — updated Oct.8.18
 
-// TEMP
-$tempcolor-shell: #354A5F;
-$tempcolor-shell-icons: #d1e8ff;
-$tempcolor-shell-icons-bg-hover: #323C4C;
-$tempcolor-shell-icons-bg-active: #2A3341;
-
 $fd-colors: () !default;
 $fd-colors: map-merge((
   "action": (
@@ -100,16 +94,16 @@ $fd-colors: map-merge((
     4: #6D7678, //neutral
   ),
   "accent": (
-    1: hsl(34, 82%, 49%), //e38b16
-    2: hsl(0, 80%, 67%), //EE6868
-    3: hsl(342, 82%, 61%), //ED4A7B
-    4: hsl(315, 54%, 49%), //C0399F
-    5: hsl(238, 65%, 64%), //686CDF
-    6: hsl(210, 64%, 60%), //5899DA
-    7: hsl(186, 81%, 39%), //13A4B4
-    8: hsl(75, 86%, 34%), //7CA10C
-    9: hsl(269, 54%, 59%), //955ECF
-    10: hsl(197, 15%, 50%) //6C8893
+    1: hsl(34, 82%, 49%), // #e38b16
+    2: hsl(0, 80%, 67%), // #EE6868
+    3: hsl(342, 82%, 61%), // #ED4A7B
+    4: hsl(315, 54%, 49%), // #C0399F
+    5: hsl(238, 65%, 64%), // #686CDF
+    6: hsl(210, 64%, 60%), // #5899DA
+    7: hsl(186, 81%, 39%), // #13A4B4
+    8: hsl(75, 86%, 34%), // #7CA10C
+    9: hsl(269, 54%, 59%), // #955ECF
+    10: hsl(197, 15%, 50%) // #6C8893
   ),
   "shell": (
     1: hsl(210, 28.4%, 29%), //background #354A5F
