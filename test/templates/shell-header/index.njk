@@ -1,7 +1,8 @@
 {% extends "layout.njk" %}
 {% import "./../utils.njk" as utils %}
 {% from "./../format.njk" import format %}
-{% from "./component.njk" import shell_header %}
+{# {% from "./component.njk" import shell_header, shell_header_menu %} #}
+{% import "./component.njk" as shell %}
 
 <!-- include add'tl css from src/styles/, e.g., ['helpers','components/button'] -->
 {% set css_deps = ['icons', 'components/button', 'components/dropdown', 'components/nav', components/identifier', 'components/popover', 'components/menu', 'components/product-switcher', helpers'] %}
@@ -22,10 +23,41 @@
     {% set example %}
     {%- set _id = utils.id() %}
 
-    {{  shell_header() }}
+    {{  shell.shell_header() }}
 
     {% endset %}
     {{ format(example) }}
+
+{% set properties = {
+  "brand": {
+    "name": "",
+    "logo": ""
+  },
+  "product_switcher": true,
+  "search": "open",
+  "copilot": true,
+  "action_number": 4,
+  "user_menu": true
+ } %}
+
+    {% call shell.header(properties) -%}
+
+      {% call shell.header_group(properties, modifier="begin") -%}
+//menu
+      {%- endcall %}
+      {% call shell.header_group(properties, modifier="middle") -%}
+bar
+      {%- endcall %}
+      {% call shell.header_group(properties, modifier="end") -%}
+
+shell.header_actions(properties="{actions: [button, button]")
+//icons
+//user
+
+      {%- endcall %}
+
+
+    {%- endcall %}
 
 
 {% endblock %}

@@ -10,11 +10,25 @@ shell_header:
     modifier={ block: [] },
     state={},
     aria={}
+
+
+    "brand": {
+      "name": "",
+      "logo": ""
+    },
+    "product_switcher": true,
+    "search": "",
+    "copilot": true
+
+  }
+
+
 -->
 
 {% macro shell_header(properties={}, modifier={}, state={}, aria={}) -%}
 {%- set _id = utils.id() %}
 <nav class="fd-shell-header">
+
 
     <div class="fd-shell-header__group fd-shell-header__group--left">
         <div class="fd-shell-header__logo">
@@ -32,7 +46,7 @@ shell_header:
 
     <div class="fd-shell-header__group fd-shell-header__group--right">
         <div class="fd-shell-header__actions">
-            <div class="fd-shell-header__action fd-display-xs-none fd-display-s-none fd-display-m-inline-block">
+            <div class="fd-shell-header__action fd-displayfii-xs-none fd-display-s-none fd-display-m-inline-block">
                 <button class="fd-button--secondary fd-button--m sap-icon--search fd-button--shellheader" aria-label="BUTTON_LABEL"></button>
             </div>
 
@@ -51,12 +65,43 @@ shell_header:
             <div class="fd-shell-header__action">
                 {{ user_menu() }}
             </div>
-
-            <div class="fd-shell-header__action fd-display-xs-none fd-display-s-none fd-display-m-inline-block">
+{% if product_switcher %}
+              <div class="fd-shell-header__action fd-display-xs-none fd-display-s-none fd-display-m-inline-block">
                 {{ product_switcher() }}
             </div>
+            {% endif %}
         </div>
     </div>
 
 </nav>
+{%- endmacro %}
+
+
+{# ////////////// #}
+
+
+{% macro header(properties={ }, modifier={}, state={}, aria={}) -%}
+{%- set _id = utils.id() %}
+<div class="fd-shell-header">
+
+{{- caller() | indent -}}
+
+</div>
+{%- endmacro %}
+
+{%- macro header_group(properties={}, modifier=[], aria={}, classes=[]) %}
+<section class="fd-shell-header__group{{ classes | classes }}{{ modifier | modifier("shell-header__group") }}"{{aria | aria}}>
+  {% if modifier === "begin" %}
+    <div class="fd-shell-header__logo">
+//logo
+    </div>
+  {% endif %}
+    {{- caller() | indent -}}
+    {% if modifier === "end" and properties.product_switcher === true %}
+      <div class="fd-shell-header__product-switcher">
+{{ product_switcher() }}
+      </div>
+    {% endif %}
+
+</section>
 {%- endmacro %}
