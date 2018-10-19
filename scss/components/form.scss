@@ -165,4 +165,10 @@ $block: #{$fd-namespace}-form;
             }
         }
     }
+    &__character-info {
+        float: right;
+        @include fd-type(#{$fd-form-message-font-size});
+        color: $fd-form-label-color;
+    }
+
 }

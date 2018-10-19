@@ -23,12 +23,16 @@ class="{{ classes | classes | trim }}{{ ' is-'+state.status if state.status }}" 
 {%- endmacro %}
 
 {% macro textarea(
-    properties={ value: "", name: "", placeholder: "", id: "" },
+    properties={ value: "", name: "", placeholder: "", id: "", character_info: ""},
     state={ disabled: false, readonly: false, status: "" },
     aria={},
     classes=[])
 -%}
 <textarea {{ _field_attrs(properties, state, aria, classes) | trim }}{{ ' placeholder="'+properties.placeholder+'"' if properties.placeholder }}>{{properties.value}}</textarea>
+{# {{properties | dump}} #}
+{%- if properties.character_info%}
+<span class="fd-form__character-info">{{ properties.character_info }}</span>
+{%- endif %}
 {# <textarea class="{{ classes | classes | trim }}{{ ' is-'+state.status if state.status }}" id="{{properties.id}}" name="{{properties.name}}" {{ ' placeholder="'+properties.placeholder+'"' if properties.placeholder }}{{ ' aria-disabled="'+ aria.disabled +'"' if aria.disabled }}{{ ' disabled' if state.disabled }}{{ ' readonly' if state.readonly }}>{{properties.value}}</textarea> #}
 {%- endmacro %}
 

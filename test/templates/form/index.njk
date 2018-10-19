@@ -45,7 +45,8 @@
 {% set example %}
 {{ form_item("textarea", properties={
         label: "Field Label",
-        value: "Pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risus. Morbi sodales gravida pulvinar. Duis malesuada odio volutpat elementum vulputate massa magna scelerisque ante et accumsan tellus nunc in sem." }) }}
+        character_info: "40 Characters Left",
+        value: "test  Pellentesque metus lacus commodo eget justo ut rutrum varius nunc. Sed non rhoncus risus. Morbi sodales gravida pulvinar. Duis malesuada odio volutpat elementum vulputate massa magna scelerisque ante et accumsan tellus nunc in sem." }) }}
 {% endset %}
 {{ format(example) }}
 <br><br>
