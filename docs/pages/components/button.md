@@ -116,7 +116,6 @@ The buttons can also be set to a state:
 ## Button Group
 Group a series of buttons together on a single line with the button group.
 
-## Button Group
 {% capture button-group-small %}
 <div class="fd-button-group" role="group" aria-label="Group label">
   <button class="fd-button sap-icon--survey"></button>
