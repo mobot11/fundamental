@@ -48,7 +48,8 @@ class="fd-{{field}} {{ size | modifier("input") }}{{ classes | classes | trim }}
     aria={},
     classes=[])
 -%}
-<input type="radio" {{ _field_attrs(properties, field, size, state, aria, classes)  | trim }}{{ ' value="'+properties.value+'"' if properties.value }}>
+<input type="radio" {{ _field_attrs(properties, field, size, state, aria, classes)  | trim }}{{ ' value="'+properties.value+'"' if properties.value }}><span {{_field_attrs(properties, field + '-inner')}}></span>
+
 {%- endmacro %}
 
 {% macro checkbox(

@@ -205,19 +205,19 @@ Radio buttons allow the user to see all options and select one. Generally, this 
     <legend class="fd-form__legend">Radio buttons</legend>
     <div class="fd-form__item fd-form__item--check">
         <label class="fd-form__label" for="pDidh761">
-            <input type="radio" class="fd-form__control" id="pDidh761" name="radio" checked="checked">
+            <input type="radio" class="fd-form__control" id="pDidh761" name="radio" checked="checked"><span class="fd-radio-inner"></span>
             Field label
         </label>
     </div>
     <div class="fd-form__item fd-form__item--check">
         <label class="fd-form__label" for="pDidh7612">
-            <input type="radio" class="fd-form__control" id="pDidh7612" name="radio">
+            <input type="radio" class="fd-form__control" id="pDidh7612" name="radio"><span class="fd-radio-inner"></span>
             Field label
         </label>
     </div>
     <div class="fd-form__item fd-form__item--check">
         <label class="fd-form__label" for="pDidh7613">
-            <input type="radio" class="fd-form__control" id="pDidh7613" name="radio">
+            <input type="radio" class="fd-form__control" id="pDidh7613" name="radio"><span class="fd-radio-inner"></span>
             Field label
         </label>
     </div>
@@ -227,19 +227,19 @@ Radio buttons allow the user to see all options and select one. Generally, this 
     <legend class="fd-form__legend">Radio buttons Disabled</legend>
     <div class="fd-form__item fd-form__item--check">
         <label class="fd-form__label" for="pDidh764">
-            <input type="radio" class="fd-form__control" id="pDidh764" name="radio" disabled>
+            <input type="radio" class="fd-form__control" id="pDidh764" name="radio" disabled><span class="fd-radio-inner"></span>
             Field label
         </label>
     </div>
     <div class="fd-form__item fd-form__item--check">
         <label class="fd-form__label" for="pDidh7615">
-            <input type="radio" class="fd-form__control" id="pDidh7615" name="radio" disabled>
+            <input type="radio" class="fd-form__control" id="pDidh7615" name="radio" disabled><span class="fd-radio-inner"></span>
             Field label
         </label>
     </div>
     <div class="fd-form__item fd-form__item--check">
         <label class="fd-form__label" for="pDidh7616">
-            <input type="radio" class="fd-form__control" id="pDidh7616" name="radio" disabled>
+            <input type="radio" class="fd-form__control" id="pDidh7616" name="radio" disabled><span class="fd-radio-inner"></span>
             Field label
         </label>
     </div>
@@ -250,19 +250,19 @@ Radio buttons allow the user to see all options and select one. Generally, this 
     <div class="fd-form__group">
         <div class="fd-form__item fd-form__item--inline fd-form__item--check">
             <label class="fd-form__label" for="pDidh767">
-                <input type="radio" class="fd-form__control" id="pDidh767" name="radio">
+                <input type="radio" class="fd-form__control" id="pDidh767" name="radio"><span class="fd-radio-inner"></span>
                 Field label
             </label>
         </div>
         <div class="fd-form__item fd-form__item--inline fd-form__item--check">
             <label class="fd-form__label" for="pDidh7618">
-                <input type="radio" class="fd-form__control" id="pDidh7618" name="radio" >
+                <input type="radio" class="fd-form__control" id="pDidh7618" name="radio" ><span class="fd-radio-inner"></span>
                 Field label
             </label>
         </div>
         <div class="fd-form__item fd-form__item--inline fd-form__item--check">
             <label class="fd-form__label" for="pDidh7619">
-                <input type="radio" class="fd-form__control" id="pDidh7619" name="radio">
+                <input type="radio" class="fd-form__control" id="pDidh7619" name="radio"><span class="fd-radio-inner"></span>
                 Field label
             </label>
         </div>

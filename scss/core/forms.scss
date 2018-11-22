@@ -137,23 +137,44 @@ input[type="checkbox"],
     }
 }
 
+// Form Base
+%radio-button-inner {
+    $check-size_: fd-space(2);
+    content: "";
+    border-radius: 50%;
+    width: $check-size_;
+    height: $check-size_;
+    position: absolute;
+    transition: background-color $fd-forms-transition-params;
+    background-color: transparent;    
+}
+
 input[type="radio"],
 .#{$fd-namespace}-radio {
     border-radius: 50%;
     &::after {
+        @extend %radio-button-inner;
         $check-size_: fd-space(2);
-        content: "";
-        border-radius: 50%;
-        width: $check-size_;
-        height: $check-size_;
-        position: absolute;
         top: calc(50% - (#{$check-size_}/2));
         left: calc(50% - (#{$check-size_}/2));
-        transition: background-color $fd-forms-transition-params;
-        background-color: transparent;
+    }
+    + .#{$fd-namespace}-radio-inner {
+        position: relative;
+        pointer-events: none;
+        &::after {
+            @extend %radio-button-inner;
+            $check-size_: fd-space(2);
+            top: calc(50% - ((#{$check-size_}/2) - 1px));
+            left: calc(50% - (#{$check-size_} + (#{$check-size_}/2)));  
+        }
     }
     &:checked {
         background-color: $fd-forms-background-color;
+        + .#{$fd-namespace}-radio-inner {
+            &::after {
+                background-color: fd-color-darkest($fd-forms-color--active);
+            }
+        }
         &::after {
             background-color: fd-color-darkest($fd-forms-color--active);
         }
