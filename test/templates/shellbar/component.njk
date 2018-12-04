@@ -34,15 +34,6 @@ shellbar:
     aria={}
 -->
 
-{% set search = search_input(properties={
-    "id": utils.id(),
-    "value": properties.search.value,
-    "placeholder": properties.search.placeholder,
-    "collapsed": properties.search.collapsed,
-    "items": properties.search.items
-  })
-%}
-
 {% set action_notification = button({ label: counter(count=25,modifier="notification"), icon: 'bell' }, modifier={ block: ['shell'] }, aria={ label: "Notifications" }) %}
 
 {% set action_pool = button({ icon: 'pool' }, modifier={ block: ['shell'] }, aria={ label: "Pool" }) %}
@@ -134,6 +125,8 @@ shellbar:
     }
   ]
 } %}
+{% set default_search = search_input(search_input_props, modifier="closed")
+%}
 
 {%- macro shell_logo(logo=brand.logo, name=brand.name) %}
   <a href="#" class="fd-shellbar__logo{{ ' fd-shellbar__logo--image-replaced' if not logo.src and not logo.svg  }}" aria-label="{{ name }}">
@@ -148,7 +141,7 @@ shellbar:
   </a>
 {% endmacro -%}
 
-{% macro shellbar(brand=brand,product=product,copilot=true,actions=actions,user=true,switcher=true, search=search_input_props, properties={}, modifier={}, state={}, aria={}, styles="") -%}
+{% macro shellbar(brand=brand,product=product,copilot=true,actions=actions,user=true,switcher=true, search=default_search, properties={}, modifier={}, state={}, aria={}, styles="") -%}
 {%- set _id = utils.id() %}
 <div class="fd-shellbar">
     <div class="fd-shellbar__group fd-shellbar__group--start">
@@ -187,7 +180,7 @@ shellbar:
       {%- if actions %}
         {%- if search %}
           <div class="fd-shellbar__action fd-shellbar__action--collapsible">
-            {{ search_input(properties=search) }}
+            {{ search }}
           </div>
         {% endif %}
         {%- for item in actions %}

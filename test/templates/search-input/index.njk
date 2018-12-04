@@ -6,6 +6,54 @@
 
 {% block content %}
     <h1>search-input</h1>
+
+
+<form action="#" class="fd-search-input" aria-label="Search">
+	<div class="fd-input-group fd-input-group--after">
+		<input type="text" class="fd-input" placeholder="Search products">
+		<span class="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button ">
+			<button type="button" class="fd-search-input__submit fd-button--light sap-icon--search"></button>
+		</span>
+	</div>
+</form>
+
+<div style="margin-left: 300px;">
+
+
+  <form action="#" class="fd-search-input fd-search-input--closed" aria-label="Search">
+  	<div class="fd-input-group fd-input-group--after">
+  		<input type="text" class="fd-search-input__field fd-input" placeholder="Search products" aria-hidden="true" id="FpY7i729">
+  		<span class="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button ">
+  			<button type="button" class="fd-search-input__submit fd-button--light sap-icon--search" aria-label="Expand Search" aria-controls="FpY7i729" aria-expanded="false"></button>
+  		</span>
+  	</div>
+  </form>
+
+
+</div>
+
+
+
+<form action="#" class="fd-search-input" aria-label="Search">
+	<div class="fd-input-group fd-input-group--after">
+		<input type="text" class="fd-input" id="sOXnf825" placeholder="Search products" autocomplete="off" aria-owns="lz8Mb177" aria-autocomplete="both">
+		<span class="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button ">
+			<button type="button" class="fd-search-input__submit fd-button--light sap-icon--search"></button>
+		</span>
+	</div>
+  <ul class="fd-search-input__menu fd-popover__body fd-popover__body--no-arrow fd-menu__list" aria-hidden="false" id="lz8Mb177" role="listbox">
+		<li class="fd-menu__item" role="option" aria-selected="false"><strong>Sear</strong>ch Result A</li>
+		<li class="fd-menu__item" role="option" aria-selected="false"><strong>Sear</strong>ch Result B</li>
+		<li class="fd-menu__item" role="option" aria-selected="false"><strong>Sear</strong>ch Result C</li>
+		<li class="fd-menu__item" role="option" aria-selected="false"><strong>Sear</strong>ch Result D</li>
+	</ul>
+
+</form>
+
+
+<br><br>
+    <hr>
+
     {% set basic_search %}
         {{ search_input(properties=data.properties)
         }}

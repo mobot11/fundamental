@@ -31,11 +31,35 @@ search_input:
       }
     ]
   },
-  modifier={ block: [] },
+  modifier="",
   state={},
   aria={}
 -->
 #}
+
+{% macro search_input(
+    properties={},
+    modifier="",
+    state={},
+    aria={},
+    classes=[],
+    size="")
+-%}
+
+<form action="#" class="fd-search-input{{ modifier | modifier("search-input") }}" aria-label="Search">
+  <div class="fd-input-group fd-input-group--after">
+    <input type="text" class="fd-search-input__field fd-input" placeholder="Search products" aria-hidden="true" id="FpY7i729">
+    <span class="fd-input-group__addon fd-input-group__addon--after fd-input-group__addon--button ">
+      <button type="button" class="fd-search-input__submit fd-button--light sap-icon--search" aria-label="Expand Search" aria-controls="FpY7i729" aria-expanded="false"></button>
+    </span>
+  </div>
+</form>
+
+
+{%- endmacro %}
+
+
+{#
 
 {% macro search_input(
     properties={},
@@ -131,4 +155,4 @@ search_input:
         </ul>
     </nav>
 </div>
-{%- endmacro -%}
+{%- endmacro -%} #}

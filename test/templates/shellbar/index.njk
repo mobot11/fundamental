@@ -8,15 +8,17 @@
 {% from "./component.njk" import shellbar %}
 {% from "./../search-input/component.njk" import search_input %}
 
-{% set css_deps = ['icons', 'components/button', 'components/dropdown', 'components/nav', 'components/identifier', 'components/popover', 'components/menu', 'components/product-switcher', 'components/search-input', 'components/counter', 'components/user-menu', 'components/product-menu', 'helpers'] %}
+{% set css_deps = ['icons', 'components/button', 'components/dropdown', 'components/nav', 'components/identifier', 'components/popover', 'components/menu', 'components/product-switcher', 'components/search-input', 'components/input-group', 'components/counter', 'components/user-menu', 'components/product-menu', 'helpers'] %}
 
-{% set search = search_input(properties={
+
+
+{% set search_open = search_input(properties={
     "id": utils.id(),
     "value": data.properties.search.value,
     "placeholder": data.properties.search.placeholder,
-    "collapsed": data.properties.search.collapsed,
+    "collapsed": false,
     "items": data.properties.search.items
-  })
+  },modifier="")
 %}
 
 
@@ -47,7 +49,7 @@
     {{ format(example) }}
 
     {% set example %}
-        {{  shellbar(switcher=true) }}
+        {{  shellbar(switcher=true,search=search_open) }}
     {% endset %}
     {{ format(example) }}
 
